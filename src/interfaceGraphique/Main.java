@@ -3,6 +3,7 @@ package interfaceGraphique;
 import javax.swing.*;
 
 public class Main
+//un petit test de prise en main de GitKraken
 {
 	public static void main(String[] args)
 	{
