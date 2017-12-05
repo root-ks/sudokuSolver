@@ -3,7 +3,7 @@ package algorithmeResolution;
 
 public class Sudoku {
 	/*Note générale: les Sudoku est composé de 9 supers cases qui contienent 9 cases 
-	  Chaque case contien un nombre de 1 à 9*/
+	  Chaque case contien un nombre de 1 à 9*vtest git /
 	
 	
 	/*Les propiétés*/
