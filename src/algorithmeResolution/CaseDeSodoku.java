@@ -8,7 +8,7 @@ public class CaseDeSodoku {
 	protected CaseDeSodoku CaseDeDroite;
 	protected CaseDeSodoku CaseDuBas;
 	
-	
+	//selut c'est le chat de git
 	
 	
 	
