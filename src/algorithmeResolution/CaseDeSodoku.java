@@ -8,9 +8,7 @@ public class CaseDeSodoku {
 	protected CaseDeSodoku CaseDeDroite;
 	protected CaseDeSodoku CaseDuBas;
 
-	//selut c'est le chat de git
-	//Le petit char est mort (8 bits de moins donc)
-
+	//Effacage des anciens test et try de push depuis Eclipse plusieurs fichier
 
 
 	/*GESTION DES CASES */

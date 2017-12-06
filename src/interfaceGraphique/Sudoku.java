@@ -14,7 +14,7 @@ public class Sudoku extends JPanel implements MouseListener
 	
 	private algorithmeResolution.Sudoku données; 
 	
-	//Ceci est un autre petit test
+	//Comme ici par exemple
 	
 	public Sudoku()
 	{
