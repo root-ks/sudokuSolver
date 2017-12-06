@@ -15,6 +15,7 @@ public class Sudoku {
 	/*Mise à jour des valeurs dans elementDe sudoku*/
 	public void miseAJour()
 	{
+		int o=0;
 		for (int i = 0; i < 9; i++)
 		{
 			for (int j = 0; j < 3; j++) 
