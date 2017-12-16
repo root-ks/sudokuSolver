@@ -14,8 +14,6 @@ public class Sudoku extends JPanel implements MouseListener
 	
 	private algorithmeResolution.Sudoku données; 
 	
-	//Comme ici par exemple
-	
 	public Sudoku()
 	{
 		this.caseZone = new SudokuCase[9];
@@ -82,6 +80,7 @@ public class Sudoku extends JPanel implements MouseListener
 		else if(str.compareTo("Résoudre")==0)
 		{
 			//Code de PICKLORIK
+			this.données.affichage();
 		}
 		
 	}

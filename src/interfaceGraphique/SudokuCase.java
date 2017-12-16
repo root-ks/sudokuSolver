@@ -72,11 +72,22 @@ public class SudokuCase extends JPanel implements MouseListener
 			String strChoix = bouton.getText();
 			
 			//Passage du texte 
-			int valeurButt = Integer.parseInt(strChoix);
+			int valeurButt;
+			if(strChoix.compareTo("-")==0)
+			{
+				valeurButt = 0;
+			}
+			else
+			{
+				valeurButt = Integer.parseInt(strChoix);
+			}
 			int indiceSudokuCase = ((Sudoku)this.getParent()).indiceCase(this);
 			int indiceButt = this.indiceButt(bouton);
+		
+			System.out.println("Erreur indice case : "+indiceSudokuCase);
+			System.out.println("Erreur indice button : "+indiceButt);
 			
-			((Sudoku)this.getParent()).getDonnées().remplirCaseIndice(valeurButt, indiceSudokuCase, indiceButt);
+			//((Sudoku)this.getParent()).getDonnées().remplirCaseIndice(valeurButt, indiceSudokuCase, indiceButt);
 			SudokuCase.box.getSourceAppel().setText(strChoix);
 			SudokuCase.box.afficher(false);
 		}

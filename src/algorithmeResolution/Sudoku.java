@@ -156,7 +156,7 @@ public class Sudoku {
 		
 	}
 	
-	/*//Ici j'insert tout les valeurs dans les cases du sudoku
+	//Ici j'insert tout les valeurs dans les cases du sudoku
 	public void inisialisation()
 	{
 		//Insertion dans la grille de la super case 0
@@ -207,7 +207,7 @@ public class Sudoku {
 		this.setValues(7, 8, 2, 1);
 		this.setValues(9, 8, 2, 2);
 		
-	}*/
+	}
 	
 	/*Methode pour afficher tout la grille de sudoku*/
 	public void affichage()

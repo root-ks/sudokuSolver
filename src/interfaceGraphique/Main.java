@@ -12,10 +12,11 @@ public class Main
 		
 		/*for (int i=0; i<81;i++)
 		{
-		s1.reductionParCase();
-		s1.reductionParLignes();
-		s1.reductionParColone();
-		s1.miseAJour();
-	}*/
+			s1.reductionParCase();
+			s1.reductionParLignes();
+			s1.reductionParColone();
+			s1.miseAJour();
+		}*/
+		
 	}
 }

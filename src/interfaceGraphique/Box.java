@@ -34,7 +34,7 @@ public class Box extends JPanel
 			this.box[i].setPreferredSize(new Dimension(50,50));
 		}
 		
-		this.box[9] = new JButton(" - ");
+		this.box[9] = new JButton("-");
 		this.box[9].setPreferredSize(new Dimension(50,50));
 		this.add(this.box[9]);
 		

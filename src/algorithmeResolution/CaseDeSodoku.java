@@ -8,9 +8,6 @@ public class CaseDeSodoku {
 	protected CaseDeSodoku CaseDeDroite;
 	protected CaseDeSodoku CaseDuBas;
 
-	//Effacage des anciens test et try de push depuis Eclipse plusieurs fichier
-
-
 	/*GESTION DES CASES */
 
 	public ObjetDeComparaison getTableauDesValeurARetirerParCase()
