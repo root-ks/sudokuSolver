@@ -1,5 +1,6 @@
 package interfaceGraphique;
 
+import java.awt.Point;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -19,11 +20,9 @@ public class Fenetre extends JFrame
 		
 		Sudoku sudoku = new Sudoku();
 		
+		sudoku.initBox(new Point(this.getX(), this.getY()));
+		
 		this.setContentPane(sudoku);
-		
-		((Sudoku)this.getContentPane()).initBox();
-		
-		System.out.println(sudoku.getComponentCount() + " composant(s) dans le Container");
 		
 		this.addWindowListener(
 			new WindowAdapter()

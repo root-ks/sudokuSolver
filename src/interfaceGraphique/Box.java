@@ -1,30 +1,30 @@
 package interfaceGraphique;
 
-import java.awt.Component;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Point;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Box extends JPanel
+public class Box extends JPanel implements MouseListener
 {
 	private JButton box[];
 	private JButton sourceAppel; 
 	private JFrame fenetreBox;
 	
-	public Box (Component parent)
+	public Box (Point windPos)
 	{
 		this.fenetreBox = new JFrame();
 		this.fenetreBox.setSize(200, 250);
-		this.fenetreBox.setLocation(new Point(parent.getX()+(parent.getWidth()),parent.getY()+15));
+		this.fenetreBox.setLocation(new Point(windPos.x+540,windPos.y+15));
 		this.fenetreBox.setResizable(false);
-		this.fenetreBox.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		//this.fenetreBox.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		
 		this.box = new JButton[10];
 		
@@ -76,11 +76,11 @@ public class Box extends JPanel
 		this.sourceAppel=bouton;
 	}
 	
-	public void ajouterMouseListenerToCase(MouseListener mL)
+	public void ajouterMouseListenerToCase()
 	{
 		for(int i=0;i<10;i++)
 		{
-			this.box[i].addMouseListener(mL);
+			this.box[i].addMouseListener(this);
 		}
 	}
 	
@@ -88,4 +88,19 @@ public class Box extends JPanel
 	{
 		this.fenetreBox.setVisible(bool);
 	}
+	
+	@Override
+	public void mouseClicked(MouseEvent e)
+	{
+		SudokuCase.boxClicked(e);
+	}
+	
+	@Override
+	public void mouseEntered(MouseEvent arg0){}
+	@Override
+	public void mouseExited(MouseEvent arg0){}
+	@Override
+	public void mousePressed(MouseEvent arg0){}
+	@Override
+	public void mouseReleased(MouseEvent arg0){}
 }

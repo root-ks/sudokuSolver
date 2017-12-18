@@ -214,7 +214,7 @@ public class Sudoku {
 	{
 		/*Cette boucle permet de se place sur les case 0,3 et 6
 		 * Ce soint les case les plus a gauche du sudoku */
-		
+		System.out.println("Sudoku résolu :");
 		for (int i = 0; i < 8; i=i+3) 
 		{
 				for (int j = 0; j <=2; j++) 
@@ -278,6 +278,17 @@ public class Sudoku {
 		}
 		
 		return indice; 		
+	}
+	
+	public void resoudreSudoku()
+	{
+		for (int i=0; i<81;i++)
+		{
+			this.reductionParCase();
+			this.reductionParLignes();
+			this.reductionParColone();
+			this.miseAJour();
+		}
 	}
 	
 }

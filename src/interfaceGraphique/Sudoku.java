@@ -1,6 +1,9 @@
 package interfaceGraphique;
 
 import java.awt.Dimension;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -16,11 +19,13 @@ public class Sudoku extends JPanel implements MouseListener
 	
 	public Sudoku()
 	{
+		this.setSize(540, 570);
+		
 		this.caseZone = new SudokuCase[9];
 		
 		for(int i=0; i<9; i++)
 		{
-			this.caseZone[i]=new SudokuCase();
+			this.caseZone[i]=new SudokuCase(i);
 			this.add(this.caseZone[i]);
 		}
 		
@@ -44,24 +49,9 @@ public class Sudoku extends JPanel implements MouseListener
 		return this.données;
 	}
 	
-	public void initBox()
+	public void initBox(Point fenetreXY)
 	{
-		for(int i=0; i<9; i++)
-		{
-			this.caseZone[i].initBox();
-		}
-	}
-	
-	public int indiceCase(SudokuCase sc)
-	{
-		for(int i=0;i<9;i++)
-		{
-			if(sc==this.caseZone[i])
-			{
-				return i;
-			}
-		}
-		return -1;
+		SudokuCase.initBox(fenetreXY);
 	}
 	
 	@Override
@@ -72,6 +62,7 @@ public class Sudoku extends JPanel implements MouseListener
 		
 		if(str.compareTo("Reset")==0)
 		{
+			System.out.println("Grille remise à zéro");
 			for(int i=0;i<9;i++)
 			{
 				this.caseZone[i].resetCases();
@@ -80,6 +71,7 @@ public class Sudoku extends JPanel implements MouseListener
 		else if(str.compareTo("Résoudre")==0)
 		{
 			//Code de PICKLORIK
+			this.données.resoudreSudoku();
 			this.données.affichage();
 		}
 		
