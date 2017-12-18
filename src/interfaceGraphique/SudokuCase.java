@@ -59,6 +59,11 @@ public class SudokuCase extends JPanel implements MouseListener
 		return -1;
 	}
 	
+	public JButton getButt(int indice)
+	{
+		return this.cases[indice];
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e)
 	{
