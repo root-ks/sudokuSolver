@@ -230,6 +230,13 @@ public class Sudoku {
 	}
 	
 	
+	public int retourCaseIndice(int i, int j)
+	{
+		int[] a= new int[2];
+		a=getCaseByIndice(j);
+		return this.S1[i].C[a[0]][a[1]].valeurDeLaCase;
+	}
+	
 	//Recupere l'indice d'un JBUTON dans un tableau et donne sa position en matrice
 	public int[] getCaseByIndice(int a)
 	{
