@@ -1,5 +1,6 @@
 package interfaceGraphique;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -54,6 +55,30 @@ public class Sudoku extends JPanel implements MouseListener
 		SudokuCase.initBox(fenetreXY);
 	}
 	
+	public void remplirCasesResolues()
+	{
+		JButton bouton;
+		int val;
+		
+		for(int i=0;i<9;i++)
+		{
+			for(int j=0;j<9;j++)
+			{
+				bouton = this.caseZone[i].getButt(j);
+				if(bouton.getText().compareTo("-")==0)
+				{
+					//val = this.données.getCase
+					bouton.setForeground(Color.RED);
+					
+				}
+				else
+				{
+					
+				}
+			}
+		}
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e)
 	{
@@ -73,6 +98,8 @@ public class Sudoku extends JPanel implements MouseListener
 			//Code de PICKLORIK
 			this.données.resoudreSudoku();
 			this.données.affichage();
+			
+			this.remplirCasesResolues();
 		}
 		
 	}

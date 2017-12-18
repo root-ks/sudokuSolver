@@ -4,9 +4,7 @@ package algorithmeResolution;
 public class Sudoku {
 	/*Note générale: les Sudoku est composé de 9 supers cases qui contienent 9 cases 
 	  Chaque case contien un nombre de 1 à 9*vtest git /
-	
-	/*Propriété pourrie pour test GitKraken*/
-	private static final Integer nul = null; //J'avais prévenu que ca servais à rien 
+
 	
 	/*Les propiétés*/
 	protected CaseDeSodoku[] S1;
@@ -14,6 +12,14 @@ public class Sudoku {
 
 	
 	/*Les méthodes*/
+	
+	/*Constructeur de base du sudoku*/
+	public Sudoku() 
+	{
+		this.S1 = new CaseDeSodoku[9];
+		this.remplisageDuTableau();
+	}
+ 
 	
 	/*Mise à jour des valeurs dans elementDe sudoku*/
 	public void miseAJour()
@@ -76,15 +82,6 @@ public class Sudoku {
 		}
 		
 	}
-	
-	
-	/*Constructeur de base du sudoku*/
-	public Sudoku() 
-	{
-		this.S1 = new CaseDeSodoku[9];
-		this.remplisageDuTableau();
-	}
- 
 	
 	/*Un methode qui va remplir les 9 cases du tableau de l'objet Sudoku, avec des cases nulls*/
 	public void remplisageDuTableau()
