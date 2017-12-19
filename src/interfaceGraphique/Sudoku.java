@@ -67,13 +67,9 @@ public class Sudoku extends JPanel implements MouseListener
 				bouton = this.caseZone[i].getButt(j);
 				if(bouton.getText().compareTo("-")==0)
 				{
-					//val = this.données.getCase
+					val = this.données.retourCaseIndice(i,j);
 					bouton.setForeground(Color.RED);
-					
-				}
-				else
-				{
-					
+					bouton.setText(String.valueOf(val));
 				}
 			}
 		}
